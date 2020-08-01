@@ -1,0 +1,24 @@
+{
+  "name": "vb11-frontend-project-lvl1",
+  "version": "1.0.0",
+  "description": "Hexlet frontend project level 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbelolapotkov/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "hexlet",
+    "frontend",
+    "js"
+  ],
+  "author": "Vasily Belolapotkov <belolapotkov.v@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbelolapotkov/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/vbelolapotkov/frontend-project-lvl1#readme"
+}
