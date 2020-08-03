@@ -1,5 +1,5 @@
 {
-  "name": "vb11-frontend-project-lvl1",
+  "name": "@vb11-hexlet/frontend-project-lvl1",
   "version": "1.0.0",
   "description": "Hexlet frontend project level 1",
   "main": "index.js",
