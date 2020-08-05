@@ -7,3 +7,6 @@ publish:
 
 brain-games:
 	node bin/brain-games
+
+lint:
+	npx eslint .
