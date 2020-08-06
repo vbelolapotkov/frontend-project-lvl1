@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import { greetUser, requestInput } from '../src/cli.js';
+import { requestInput, print } from '../src/cli.js';
+import greetUser from '../src/games.js';
 
 function printRules() {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  print('Answer "yes" if the number is even, otherwise answer "no".');
 }
 
 function generateNumber(MAX_NUMBER = 100) {
@@ -14,16 +15,16 @@ function getCorrectAnswer(number) {
 }
 
 function askQuestion(number) {
-  console.log(`Question: ${number}`);
+  print(`Question: ${number}`);
   return requestInput('Your answer: ');
 }
 
 function printWrongAnswer(userAnswer, correctAnswer) {
-  console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+  print(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
 }
 
 function printCorrectAnswer() {
-  console.log('Correct!');
+  print('Correct!');
 }
 
 function launchGame() {
@@ -49,11 +50,11 @@ function launchGame() {
 }
 
 function congratulateUser(name = '') {
-  console.log(`Congratulations, ${name}!`);
+  print(`Congratulations, ${name}!`);
 }
 
 function letsTryAgain(name = '') {
-  console.log(`Let's try again, ${name}!`);
+  print(`Let's try again, ${name}!`);
 }
 
 

@@ -1,11 +1,10 @@
+/* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 
 export function requestInput(question = '') {
   return readlineSync.question(question);
 }
 
-export function greetUser() {
-  const name = requestInput('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
+export function print(msg) {
+  console.log(msg);
 }
