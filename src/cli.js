@@ -7,4 +7,5 @@ export function requestInput(question = '') {
 export function greetUser() {
   const name = requestInput('May I have your name? ');
   console.log(`Hello, ${name}!`);
+  return name;
 }
