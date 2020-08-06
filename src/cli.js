@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 
-export function greet(name) {
-  console.log(`Hello, ${name}!`);
+export function requestInput(question = '') {
+  return readlineSync.question(question);
 }
 
-export function askName() {
-  return readlineSync.question('May I have your name? ');
+export function greetUser() {
+  const name = requestInput('May I have your name? ');
+  console.log(`Hello, ${name}!`);
 }
