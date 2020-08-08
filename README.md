@@ -9,4 +9,4 @@ Includes a set of simple console-based quiz games.
 
 Answer if generated number is even. Give 3 correct answers in a row to win.
 
-[![asciicast](https://asciinema.org/a/rmKtMGEb9FtGNCPrn4GhVkfYP.svg)](https://asciinema.org/a/rmKtMGEb9FtGNCPrn4GhVkfYP)
+[![asciicast](https://asciinema.org/a/iWviLvGK2cIwSAK2tAMXDdpys.svg)](https://asciinema.org/a/iWviLvGK2cIwSAK2tAMXDdpys)
