@@ -3,10 +3,16 @@
 
 # frontend-project-lvl1
 
-Includes a set of simple console-based quiz games.
+Includes a set of simple console-based quiz games. Give 3 correct answers in a row to win.
 
 ## brain-even
 
-Answer if generated number is even. Give 3 correct answers in a row to win.
+Answer if generated number is even.
 
 [![asciicast](https://asciinema.org/a/iWviLvGK2cIwSAK2tAMXDdpys.svg)](https://asciinema.org/a/iWviLvGK2cIwSAK2tAMXDdpys)
+
+## brain-calc
+
+Calculate the result of generated expression.
+
+[![asciicast](https://asciinema.org/a/yibb65SYqGNJIz8sOLEajHKzo.svg)](https://asciinema.org/a/yibb65SYqGNJIz8sOLEajHKzo)
