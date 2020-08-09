@@ -32,17 +32,17 @@ export function toString(variable) {
 export function gcd(a, b) {
   // Make sure we deal with positive numbers.
   const [x, y] = [a, b].map(Math.abs);
-  let [greater, gcd] = x > y ? [x, y] : [y, x];
+  let [greater, currentGcd] = x > y ? [x, y] : [y, x];
 
-  // Use Euclidean algorithm to calculate gcd https://en.wikipedia.org/wiki/Euclidean_algorithm.
-  while (gcd > 0) {
-    const nextGcd = greater % gcd;
+  // Use Euclidean algorithm to calculate GCD https://en.wikipedia.org/wiki/Euclidean_algorithm.
+  while (currentGcd > 0) {
+    const nextGcd = greater % currentGcd;
     if (nextGcd === 0) {
       break;
     }
-    greater = gcd;
-    gcd = nextGcd;
+    greater = currentGcd;
+    currentGcd = nextGcd;
   }
 
-  return gcd;
+  return currentGcd;
 }
