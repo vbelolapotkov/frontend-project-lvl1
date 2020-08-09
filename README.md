@@ -16,3 +16,9 @@ Answer if generated number is even.
 Calculate the result of generated expression.
 
 [![asciicast](https://asciinema.org/a/yibb65SYqGNJIz8sOLEajHKzo.svg)](https://asciinema.org/a/yibb65SYqGNJIz8sOLEajHKzo)
+
+## brain-gcd
+
+Calculate greatest common divisor of generated numbers.
+
+[![asciicast](https://asciinema.org/a/EhUtfP7EVXivvBvoQlIi6kVCU.svg)](https://asciinema.org/a/EhUtfP7EVXivvBvoQlIi6kVCU)
