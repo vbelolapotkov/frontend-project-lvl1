@@ -28,3 +28,9 @@ Calculate greatest common divisor of generated numbers.
 Find the missing number in generated arithmetic progression.
 
 [![asciicast](https://asciinema.org/a/fuH28gZAEdnjF3tCgDKP7RFfK.svg)](https://asciinema.org/a/fuH28gZAEdnjF3tCgDKP7RFfK)
+
+## brain-prime
+
+Answer if generated number is prime.
+
+[![asciicast](https://asciinema.org/a/MwIBwmqEnMvBNyqKu970zMA0d.svg)](https://asciinema.org/a/MwIBwmqEnMvBNyqKu970zMA0d)
