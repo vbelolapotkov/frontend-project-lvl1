@@ -1,4 +1,4 @@
-import createGame, { randomNumber, pickRandom, toString } from './index.js';
+import createGame, { randomNumber, pickRandom, toString } from '../index.js';
 
 function getRules() {
   return 'What is the result of the expression?';
