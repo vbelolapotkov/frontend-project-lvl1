@@ -1,6 +1,12 @@
 import { requestInput, print } from './cli.js';
 import { toString } from './utils.js';
-import greetUser from './games.js';
+
+export function greetUser() {
+  print('Welcome to the Brain Games!');
+  const name = requestInput('May I have your name? ');
+  print(`Hello, ${name}!`);
+  return name;
+}
 
 function printRules(gameConfig) {
   print(gameConfig.getRules());
