@@ -46,3 +46,24 @@ export function gcd(a, b) {
 
   return currentGcd;
 }
+
+/**
+ * Checks if given number is prime.
+ *
+ * @param {Number} number
+ *
+ * @returns {Boolean} True if number is prime
+ */
+export function isPrime(number) {
+  if (!Number.isInteger(number) || number < 2) {
+    return false;
+  }
+
+  for (let divisor = 2; divisor < Math.sqrt(number); divisor += 1) {
+    if (number % divisor === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
