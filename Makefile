@@ -20,5 +20,8 @@ brain-gcd:
 brain-progression:
 	node bin/brain-progression
 
+brain-prime:
+	node bin/brain-prime
+
 lint:
 	npx eslint .
