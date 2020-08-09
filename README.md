@@ -22,3 +22,9 @@ Calculate the result of generated expression.
 Calculate greatest common divisor of generated numbers.
 
 [![asciicast](https://asciinema.org/a/EhUtfP7EVXivvBvoQlIi6kVCU.svg)](https://asciinema.org/a/EhUtfP7EVXivvBvoQlIi6kVCU)
+
+## brain-progression
+
+Find the missing number in generated arithmetic progression.
+
+[![asciicast](https://asciinema.org/a/fuH28gZAEdnjF3tCgDKP7RFfK.svg)](https://asciinema.org/a/fuH28gZAEdnjF3tCgDKP7RFfK)
