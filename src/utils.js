@@ -19,3 +19,30 @@ export function pickRandom(array) {
 export function toString(variable) {
   return typeof variable === 'object' ? JSON.stringify(variable, null, 2) : String(variable);
 }
+
+/**
+ * Calculates greatest common divisor.
+ *
+ * @param {Number} a
+ * @param {Number} b
+ *
+ * @returns {Number}
+ */
+//
+export function gcd(a, b) {
+  // Make sure we deal with positive numbers.
+  const [x, y] = [a, b].map(Math.abs);
+  let [greater, gcd] = x > y ? [x, y] : [y, x];
+
+  // Use Euclidean algorithm to calculate gcd https://en.wikipedia.org/wiki/Euclidean_algorithm.
+  while (gcd > 0) {
+    const nextGcd = greater % gcd;
+    if (nextGcd === 0) {
+      break;
+    }
+    greater = gcd;
+    gcd = nextGcd;
+  }
+
+  return gcd;
+}
