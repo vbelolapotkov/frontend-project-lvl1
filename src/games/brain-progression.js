@@ -6,11 +6,13 @@ function getRules() {
 
 function createRound() {
   const SEQ_LENGTH = 10;
-  const shift = randomNumber(11);
-  const step = randomNumber([2, 11]);
-  const sequence = new Array(SEQ_LENGTH).fill(0).map((_, index) =>
-    String(index * step + shift)
-  );
+  const MAX_SHIFT = 10; // For the sake of simplicity.
+  const STEP_RANGE = [2, 10]; // Start from 2 to avoid dumb sequences and limit by 10 for simplicity.
+  const shift = randomNumber(MAX_SHIFT);
+  const step = randomNumber(STEP_RANGE);
+  const sequence = new Array(SEQ_LENGTH)
+    .fill(0)
+    .map((_, index) => String(index * step + shift));
 
   // Avoid hiding first and last element.
   const hiddenIndex = randomNumber([1, sequence.length - 1]);
