@@ -1,4 +1,4 @@
-import createGame, { randomNumber } from '../index.js';
+import createGame, { randomNumber, toString } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -10,7 +10,7 @@ function createRound() {
   const step = randomNumber(STEP_RANGE);
   const sequence = new Array(SEQ_LENGTH)
     .fill(0)
-    .map((_, index) => String(index * step + shift));
+    .map((_, index) => toString(index * step + shift));
 
   // Avoid hiding first and last element.
   const hiddenIndex = randomNumber([1, sequence.length - 1]);

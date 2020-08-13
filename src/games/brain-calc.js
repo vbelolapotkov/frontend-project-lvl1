@@ -19,7 +19,7 @@ function createRound() {
   const b = randomNumber();
   const operation = pickRandom(['+', '-', '*']);
   const question = `${a} ${operation} ${b}`;
-  const correctAnswer = String(calculateAnswer(a, b, operation));
+  const correctAnswer = toString(calculateAnswer(a, b, operation));
   return { question, correctAnswer };
 }
 
