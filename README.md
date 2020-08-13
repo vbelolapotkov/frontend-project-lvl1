@@ -5,6 +5,24 @@
 
 Includes a set of simple console-based quiz games. Give 3 correct answers in a row to win.
 
+## Installation
+
+To install and play games Node.js 13+ is required.
+Run following commands in terminal to install:
+
+```bash
+git clone https://github.com/vbelolapotkov/frontend-project-lvl1.git ./brain-games
+cd brain-games
+npm install --production
+npm link
+```
+
+After installation type game name in the terminal to launch game. Example:
+
+```bash
+brain-even
+```
+
 ## brain-even
 
 Answer if generated number is even.
