@@ -1,8 +1,6 @@
 import createGame, { randomNumber, gcd } from '../index.js';
 
-function getRules() {
-  return 'Find the greatest common divisor of given numbers.';
-}
+const description = 'Find the greatest common divisor of given numbers.';
 
 function createRound() {
   const a = randomNumber();
@@ -13,6 +11,6 @@ function createRound() {
 }
 
 export default createGame({
-  getRules,
+  description,
   createRound,
 });

@@ -1,8 +1,6 @@
 import createGame, { randomNumber, isPrime } from '../index.js';
 
-function getRules() {
-  return 'Answer "yes" if given number is prime. Otherwise answer "no".';
-}
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function createRound() {
   const number = randomNumber();
@@ -12,6 +10,6 @@ function createRound() {
 }
 
 export default createGame({
-  getRules,
+  description,
   createRound,
 });

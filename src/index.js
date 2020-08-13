@@ -8,10 +8,6 @@ export function greetUser() {
   return name;
 }
 
-function printRules(gameConfig) {
-  print(gameConfig.getRules());
-}
-
 function congratulateUser(name = '') {
   print(`Congratulations, ${name}!`);
 }
@@ -61,14 +57,14 @@ function validateGameConfig(config) {
     throw new Error(`Game config must be an object. Received: ${toString(config)}`);
   }
 
-  const { getRules, createRound } = config;
+  const { description, createRound } = config;
 
-  if (typeof getRules !== 'function') {
-    throw new Error(`getRules method is missing in game config. Received: ${toString(getRules)}`);
+  if (typeof description !== 'string' && description.length ) {
+    throw new Error(`description property is missing in game config. Received: ${description}`);
   }
 
   if (typeof createRound !== 'function') {
-    throw new Error(`createRound method is missing in game config. Received: ${toString(getRules)}`);
+    throw new Error(`createRound method is missing in game config. Received: ${toString(createRound)}`);
   }
 }
 
@@ -78,7 +74,7 @@ export default function createGame(gameConfig = {}) {
   validateGameConfig(gameConfig);
   return () => {
     const name = greetUser();
-    printRules(gameConfig);
+    print(gameConfig.description);
     const isWon = launchGame(gameConfig);
     if (isWon) {
       congratulateUser(name);

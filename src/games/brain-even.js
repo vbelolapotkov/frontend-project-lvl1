@@ -1,8 +1,6 @@
 import createGame, { randomNumber } from '../index.js';
 
-function getRules() {
-  return 'Answer "yes" if the number is even, otherwise answer "no".';
-}
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function createRound() {
   const number = randomNumber();
@@ -12,6 +10,6 @@ function createRound() {
 }
 
 export default createGame({
-  getRules,
+  description,
   createRound,
 });

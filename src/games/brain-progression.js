@@ -1,8 +1,6 @@
 import createGame, { randomNumber } from '../index.js';
 
-function getRules() {
-  return 'What number is missing in the progression?';
-}
+const description = 'What number is missing in the progression?';
 
 function createRound() {
   const SEQ_LENGTH = 10;
@@ -23,6 +21,6 @@ function createRound() {
 }
 
 export default createGame({
-  getRules,
+  description,
   createRound,
 });

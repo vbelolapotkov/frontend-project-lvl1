@@ -1,8 +1,6 @@
 import createGame, { randomNumber, pickRandom, toString } from '../index.js';
 
-function getRules() {
-  return 'What is the result of the expression?';
-}
+const description = 'What is the result of the expression?';
 
 function calculateAnswer(a, b, operand) {
   switch (operand) {
@@ -26,6 +24,6 @@ function createRound() {
 }
 
 export default createGame({
-  getRules,
+  description,
   createRound,
 });
