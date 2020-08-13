@@ -1,4 +1,4 @@
-import createGame, { randomNumber, pickRandom, toString } from '../index.js';
+import { randomNumber, pickRandom, toString } from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
@@ -10,7 +10,8 @@ function calculateAnswer(a, b, operation) {
       return a - b;
     case '*':
       return a * b;
-    default: throw new Error(`Unknown operation ${toString(operation)}`);
+    default:
+      throw new Error(`Unknown operation ${toString(operation)}`);
   }
 }
 
@@ -23,7 +24,7 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default createGame({
+export default {
   description,
   createRound,
-});
+};

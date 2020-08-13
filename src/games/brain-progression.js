@@ -1,4 +1,4 @@
-import createGame, { randomNumber, toString } from '../index.js';
+import { randomNumber, toString } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -20,7 +20,7 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default createGame({
+export default {
   description,
   createRound,
-});
+};

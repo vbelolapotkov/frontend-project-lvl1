@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import brainCalc from '../src/games/brain-calc.js';
+import createGame from '../src/index.js';
+import gameConfig from '../src/games/brain-calc.js';
 
+const brainCalc = createGame(gameConfig);
 brainCalc();

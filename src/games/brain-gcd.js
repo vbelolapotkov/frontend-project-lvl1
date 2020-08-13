@@ -1,4 +1,4 @@
-import createGame, { randomNumber, gcd, toString } from '../index.js';
+import { randomNumber, gcd, toString } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -10,7 +10,7 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default createGame({
+export default {
   description,
   createRound,
-});
+};

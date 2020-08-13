@@ -1,4 +1,4 @@
-import createGame, { randomNumber, isPrime, toString } from '../index.js';
+import { randomNumber, isPrime, toString } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -9,7 +9,7 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default createGame({
+export default {
   description,
   createRound,
-});
+};

@@ -1,4 +1,4 @@
-import createGame, { randomNumber, toString } from '../index.js';
+import { randomNumber, toString } from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -9,7 +9,7 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default createGame({
+export default {
   description,
   createRound,
-});
+};
