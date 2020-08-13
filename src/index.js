@@ -8,43 +8,25 @@ export function greetUser() {
   return name;
 }
 
-function congratulateUser(name = '') {
-  print(`Congratulations, ${name}!`);
-}
-
-function letsTryAgain(name = '') {
-  print(`Let's try again, ${name}!`);
-}
-
-function askQuestion(question = '') {
-  print(`Question: ${question}`);
-  return requestInput('Your answer: ');
-}
-
-function printWrongAnswer(userAnswer, correctAnswer) {
-  print(
-    `"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`
-  );
-}
-
-function printCorrectAnswer() {
-  print('Correct!');
-}
-
-function launchGame(gameConfig) {
+function playGame(createRound) {
   const ANSWERS_TO_WIN_QTY = 3;
   let correctAnswers = 0;
   while (correctAnswers < ANSWERS_TO_WIN_QTY) {
-    const { question, correctAnswer } = gameConfig.createRound();
-    const userAnswer = askQuestion(question);
+    const { question, correctAnswer } = createRound();
+
+    print(`Question: ${question}`);
+    const userAnswer = requestInput('Your answer: ');
+
     if (userAnswer !== correctAnswer) {
-      printWrongAnswer(userAnswer, correctAnswer);
+      print(
+        `"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`
+      );
 
       // FAILED!
       return false;
     }
 
-    printCorrectAnswer();
+    print('Correct!');
     correctAnswers += 1;
   }
 
@@ -75,11 +57,11 @@ export default function createGame(gameConfig = {}) {
   return () => {
     const name = greetUser();
     print(gameConfig.description);
-    const isWon = launchGame(gameConfig);
+    const isWon = playGame(gameConfig.createRound);
     if (isWon) {
-      congratulateUser(name);
+      print(`Congratulations, ${name}!`);
     } else {
-      letsTryAgain(name);
+      print(`Let's try again, ${name}!`);
     }
   }
 }
