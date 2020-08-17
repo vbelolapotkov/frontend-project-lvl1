@@ -1,4 +1,4 @@
-import { randomNumber, toString } from '../utils.js';
+import { randomNatural, toString } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -30,8 +30,8 @@ function gcd(a, b) {
 }
 
 function createRound() {
-  const a = randomNumber();
-  const b = randomNumber();
+  const a = randomNatural();
+  const b = randomNatural();
   const question = `${a} ${b}`;
   const correctAnswer = toString(gcd(a, b));
   return { question, correctAnswer };
