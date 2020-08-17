@@ -10,8 +10,8 @@ export function greetUser() {
 
 function playGame(createRound) {
   const ANSWERS_TO_WIN_QTY = 3;
-  let correctAnswers = 0;
-  while (correctAnswers < ANSWERS_TO_WIN_QTY) {
+  let correctAnswersCount = 0;
+  while (correctAnswersCount < ANSWERS_TO_WIN_QTY) {
     const { question, correctAnswer } = createRound();
 
     print(`Question: ${question}`);
@@ -27,7 +27,7 @@ function playGame(createRound) {
     }
 
     print('Correct!');
-    correctAnswers += 1;
+    correctAnswersCount += 1;
   }
 
   // VICTORY!
