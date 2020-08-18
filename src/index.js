@@ -1,13 +1,6 @@
 import { requestInput, print } from './cli.js';
 import { toString } from './utils.js';
 
-export function greetUser() {
-  print('Welcome to the Brain Games!');
-  const name = requestInput('May I have your name? ');
-  print(`Hello, ${name}!`);
-  return name;
-}
-
 function playGame(createRound) {
   const ANSWERS_TO_WIN_QTY = 3;
   let correctAnswersCount = 0;
@@ -55,7 +48,9 @@ export * from './utils.js';
 export default function createGame(gameConfig = {}) {
   validateGameConfig(gameConfig);
   return () => {
-    const name = greetUser();
+    print('Welcome to the Brain Games!');
+    const name = requestInput('May I have your name? ');
+    print(`Hello, ${name}!`);
     print(gameConfig.description);
     const isWon = playGame(gameConfig.createRound);
     if (isWon) {
