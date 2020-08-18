@@ -11,7 +11,11 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
  * @returns {Boolean} True if number is prime
  */
 function isPrime(number) {
-  if (!Number.isInteger(number) || number < 2) {
+  if (!Number.isInteger(number)) {
+    throw new Error(`Integer is expected, received: ${toString(number)}`);
+  }
+
+  if (number < 2) {
     return false;
   }
 
