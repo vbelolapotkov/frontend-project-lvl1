@@ -1,3 +1,4 @@
+import createGame from '../index.js';
 import { randomNatural, toString } from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -9,7 +10,11 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default {
-  description,
-  createRound,
+export default () => {
+  const brainEven = createGame({
+    description,
+    createRound,
+  });
+
+  brainEven();
 };

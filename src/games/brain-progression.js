@@ -1,3 +1,4 @@
+import createGame from '../index.js';
 import { randomNumber, randomNatural, toString } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
@@ -19,7 +20,11 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default {
-  description,
-  createRound,
+export default () => {
+  const brainProgression = createGame({
+    description,
+    createRound,
+  });
+
+  brainProgression();
 };

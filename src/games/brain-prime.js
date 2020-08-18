@@ -1,3 +1,4 @@
+import createGame from '../index.js';
 import { randomNatural, toString } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -30,7 +31,11 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default {
-  description,
-  createRound,
+export default () => {
+  const brainPrime = createGame({
+    description,
+    createRound,
+  });
+
+  brainPrime();
 };

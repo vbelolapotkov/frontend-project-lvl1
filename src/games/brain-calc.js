@@ -1,3 +1,4 @@
+import createGame from '../index.js';
 import { randomNatural, pickRandom, toString } from '../utils.js';
 
 const description = 'What is the result of the expression?';
@@ -24,7 +25,11 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default {
-  description,
-  createRound,
+export default () => {
+  const brainCalc = createGame({
+    description,
+    createRound,
+  });
+
+  brainCalc();
 };

@@ -1,3 +1,4 @@
+import createGame from '../index.js';
 import { randomNatural, toString } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -37,7 +38,11 @@ function createRound() {
   return { question, correctAnswer };
 }
 
-export default {
-  description,
-  createRound,
+export default () => {
+  const brainGcd = createGame({
+    description,
+    createRound,
+  });
+
+  brainGcd();
 };
